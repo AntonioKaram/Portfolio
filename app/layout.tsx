@@ -1,12 +1,12 @@
-import '../styles/globals.css';
+import './globals.css';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Sidebar from '../../components/navigationbar';
+import Sidebar from '../components/navigationbar';
 import { Analytics } from '@vercel/analytics/react';
 
 const kaisei = localFont({
-  src: '../../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
+  src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
   weight: '700',
   variable: '--font-kaisei',
   display: 'swap',
