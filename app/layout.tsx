@@ -1,37 +1,37 @@
-import './globals.css';
-import clsx from 'clsx';
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import Sidebar from '../components/navigationbar';
-import { Analytics } from '@vercel/analytics/react';
+import "./globals.css";
+import clsx from "clsx";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import Sidebar from "../components/navigationbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const kaisei = localFont({
-  src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
-  weight: '700',
-  variable: '--font-kaisei',
-  display: 'swap',
+  src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
+  weight: "700",
+  variable: "--font-kaisei",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Antonio Karam',
-    template: '%s | Antonio Karam',
+    default: "Antonio Karam",
+    template: "%s | Antonio Karam",
   },
-  description: 'INSERT META HERE',
+  description: "INSERT META HERE",
   openGraph: {
-    title: 'Antonio Karam',
-    description: 'INSERT META HERE.',
-    url: 'https://antoniokaram.dev',
-    siteName: 'Antonio Karam',
+    title: "Antonio Karam",
+    description: "INSERT META HERE.",
+    url: "https://antoniokaram.dev",
+    siteName: "Antonio Karam",
     images: [
       {
-        url: 'LOGO',
+        url: "LOGO",
         width: 1920,
         height: 1080,
       },
     ],
-    locale: 'en-US',
-    type: 'website',
+    locale: "en-US",
+    type: "website",
   },
   robots: {
     index: true,
@@ -39,21 +39,21 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   twitter: {
-    title: 'Antonio Karam',
-    card: 'summary_large_image',
+    title: "Antonio Karam",
+    card: "summary_large_image",
   },
   icons: {
-    shortcut: '/favicon.ico',
+    shortcut: "/favicon.ico",
   },
   verification: {
-    google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    yandex: '14d2e73487fa6c71',
+    google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
+    yandex: "14d2e73487fa6c71",
   },
 };
 
@@ -66,7 +66,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'text-black bg-white dark:text-white dark:bg-neutral-950',
+        "text-black bg-white dark:text-white dark:bg-neutral-950",
         kaisei.variable
       )}
     >
