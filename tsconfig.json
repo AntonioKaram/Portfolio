@@ -15,14 +15,20 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./components/*", "./lib/*"]
     }
   },
+  "files": [
+    "components/icons.tsx",
+    "lib/info.tsx",
+  ],
   "include": ["next-env.d.ts",
   "**/*.ts",
   "**/*.tsx",
   ".next/types/**/*.ts",
-  ".contentlayer/generated"],
+  ".contentlayer/generated",
+  "components",
+  "lib"],
   "exclude": ["node_modules"],
 
 }

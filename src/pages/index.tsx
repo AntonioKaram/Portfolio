@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { name, about, bio, avatar } from 'lib/info'
+import { name, about, bio, avatar } from '../../lib/info'
 
 import {
   ArrowIcon,
   GitHubIcon,
   TwitterIcon,
   ViewsIcon,
-} from 'components/icons'
+  LinkedIN,
+  YoutubeIcon,
+} from '../../components/icons'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,12 +19,12 @@ export default function Home() {
   return (
     <main>
       <section id="home">
-        <h1 className="font-bold text-3xl font-serif">{/* {name} */}</h1>
+        <h1 className="font-bold text-3xl font-serif">{name}</h1>
         <p className="my-5 max-w-[460px] text-neutral-800 dark:text-neutral-200">
-          {/* {about()} */}
+          {about()}
         </p>
         <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
-            {/*<Image
+            <Image
                 alt={name}
                 className="rounded-full grayscale"
                 src={avatar}
@@ -30,7 +32,6 @@ export default function Home() {
                 width={100}
                 priority
               /> 
-            */}
 
             <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
               <a
@@ -39,29 +40,39 @@ export default function Home() {
                 // href=""  add link here
                 className="flex items-center gap-2"
               >
-                {/* Maybe twitter or some other social
+                
                 <TwitterIcon />
-                `${tweetCount.toLocaleString()} tweets all time`}*/}
+                {/* `${tweetCount.toLocaleString()} tweets all time`} */}
               </a>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://github.com/AntonioKaram"
                 className="flex items-center gap-2"
-              > {/*
+              > 
                 <GitHubIcon />
-                {`${starCount.toLocaleString()} stars on this repo`}*/}
+                {/* {`${starCount.toLocaleString()} stars on this repo`} */}
               </a>
 
-              {/*
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://linkedin.com/in/antonio-karam"
+                className="flex items-center gap-2"
+              > 
+                
+                <LinkedIN />
+              </a>
+
+              
               <Link href="/blog" className="flex items-center">
                 <ViewsIcon />
-                {`${views.toLocaleString()} blog views all time`}
-              </Link>*/}
+                {/* {`${views.toLocaleString()} blog views all time`} */}
+              </Link>
             </div>
         </div>
         <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
-        {/* {bio()} */}
+        {bio()}
       </p>
 
       <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
@@ -72,7 +83,7 @@ export default function Home() {
             target="_blank"
             href="https://twitter.com/antoniokrm"
           >
-            {/* <ArrowIcon /> */}
+            <ArrowIcon />
             <p className="h-7">Follow Me On Twitter</p>
           </a>
         </li>
@@ -83,7 +94,7 @@ export default function Home() {
             target="_blank"
             // href="" some link here
           >
-            {/* <ArrowIcon /> */}
+            <ArrowIcon />
             <p className="h-7">get email updates</p>
           </a>
         </li>
