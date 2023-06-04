@@ -28,7 +28,8 @@
   ".next/types/**/*.ts",
   ".contentlayer/generated",
   "components",
-  "lib"],
+  "lib",
+  "@vercel"],
   "exclude": ["node_modules"],
 
 }
