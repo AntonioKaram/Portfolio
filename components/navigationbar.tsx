@@ -3,8 +3,22 @@
 import clsx from 'clsx';
 import Link from 'next/link' ;
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import { LayoutGroup, motion } from 'framer-motion';
+
+const navItems = {
+  '#home': {
+    name: 'home',
+  },
+  '#about': {
+    name: 'about',
+  },
+  '#projects': {
+    name: 'projects',
+  },
+  '#contact': {
+    name: 'contact',
+  },
+};
 
 
 function Logo() {
@@ -16,8 +30,7 @@ function Logo() {
 }
 
 export default function Navbar() {
-  let pathname = usePathname();
-  const [active, setActive] = useState('home');
+  const [active, setActive] = useState('#home');
 
   const handleSetActive = (id: any) => {
     setActive(id);
@@ -38,22 +51,23 @@ export default function Navbar() {
             id="nav"
           >
             <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
-
-              <ul>
-                <li><Link
-                    href="#home"
-                    onClick={() => handleSetActive('home')}
+            {Object.entries(navItems).map(([path, { name }]) => {
+              return(
+                <Link
+                    href={path}
+                    key={path}
+                    onClick={() => handleSetActive(path)}
                     className={clsx(
                       'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
                       {
-                        'text-neutral-500': !(active === "home"),
-                        'font-regular': (active === "home"),
+                        'text-neutral-500': !(active === path),
+                        'font-regular': (active === path),
                       }
                     )}
                   >
                     <span className="relative py-[5px] px-[10px]">
-                      home
-                      {active === "home" ? (
+                      {name}
+                      {active === path ? (
                         <motion.div
                           className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md z-[-1]"
                           layoutId="sidebar"
@@ -65,91 +79,9 @@ export default function Navbar() {
                         />
                       ) : null}
                     </span>
-                  </Link></li>
-                  
-                  <li><Link
-                    href="#about"
-                    onClick={() => handleSetActive('about')}
-                    className={clsx(
-                      'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
-                      {
-                        'text-neutral-500': !(active === "about"),
-                        'font-regular': (active === "about"),
-                      }
-                    )}
-                  >
-                    <span className="relative py-[5px] px-[10px]">
-                      about
-                      {active === "about" ? (
-                        <motion.div
-                          className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md z-[-1]"
-                          layoutId="sidebar"
-                          transition={{
-                            type: 'spring',
-                            stiffness: 350,
-                            damping: 30,
-                          }}
-                        />
-                      ) : null}
-                    </span>
-                  </Link></li>
-
-                  <li><Link
-                    href="#projects"
-                    onClick={() => handleSetActive('projects')}
-                    className={clsx(
-                      'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
-                      {
-                        'text-neutral-500': !(active === "projects"),
-                        'font-regular': (active === "projects"),
-                      }
-                    )}
-                  >
-                    <span className="relative py-[5px] px-[10px]">
-                      projects
-                      {active === "projects" ? (
-                        <motion.div
-                          className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md z-[-1]"
-                          layoutId="sidebar"
-                          transition={{
-                            type: 'spring',
-                            stiffness: 350,
-                            damping: 30,
-                          }}
-                        />
-                      ) : null}
-                    </span>
-                  </Link></li>
-
-                  <li><Link
-                    href="#contact"
-                    onClick={() => handleSetActive('contact')}
-                    className={clsx(
-                      'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
-                      {
-                        'text-neutral-500': !(active === "contact"),
-                        'font-regular': (active === "contact"),
-                      }
-                    )}
-                  >
-                    <span className="relative py-[5px] px-[10px]">
-                      contact
-                      {active === "contact" ? (
-                        <motion.div
-                          className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md z-[-1]"
-                          layoutId="sidebar"
-                          transition={{
-                            type: 'spring',
-                            stiffness: 350,
-                            damping: 30,
-                          }}
-                        />
-                      ) : null}
-                    </span>
-                  </Link></li>
-              </ul>
-   
-
+                  </Link>
+              );
+            })}
             </div>
           </nav>
         </LayoutGroup>
