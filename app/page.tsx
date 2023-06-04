@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { name, about, bio, avatar } from '../../lib/info'
+import { name, about, bio, avatar } from '../lib/info'
 
 import {
   ArrowIcon,
@@ -10,7 +10,7 @@ import {
   ViewsIcon,
   LinkedIN,
   YoutubeIcon,
-} from '../../components/icons'
+} from '../components/icons'
 
 
 const inter = Inter({ subsets: ['latin'] })
