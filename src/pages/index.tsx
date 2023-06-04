@@ -1,5 +1,15 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { name, about, bio, avatar } from 'lib/info'
+
+import {
+  ArrowIcon,
+  GitHubIcon,
+  TwitterIcon,
+  ViewsIcon,
+} from 'components/icons'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,17 +36,17 @@ export default function Home() {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://twitter.com/leeerob"
+                // href=""  add link here
                 className="flex items-center gap-2"
               >
-                {/*
+                {/* Maybe twitter or some other social
                 <TwitterIcon />
                 `${tweetCount.toLocaleString()} tweets all time`}*/}
               </a>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://github.com/leerob"
+                href="https://github.com/AntonioKaram"
                 className="flex items-center gap-2"
               > {/*
                 <GitHubIcon />
@@ -60,10 +70,10 @@ export default function Home() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://twitter.com/antoniokrm"
           >
             {/* <ArrowIcon /> */}
-            <p className="h-7">follow me on twitter</p>
+            <p className="h-7">Follow Me On Twitter</p>
           </a>
         </li>
         <li>
@@ -71,7 +81,7 @@ export default function Home() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://leerob.substack.com"
+            // href="" some link here
           >
             {/* <ArrowIcon /> */}
             <p className="h-7">get email updates</p>
