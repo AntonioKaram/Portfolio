@@ -1,42 +1,39 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import Link from 'next/link' ;
-import { useState } from 'react';
-import { LayoutGroup, motion } from 'framer-motion';
+import clsx from "clsx";
+import { Link } from "react-scroll";
+import { useState } from "react";
+import { LayoutGroup, motion } from "framer-motion";
 
 const navItems = {
-  '#home': {
-    name: 'home',
+  home: {
+    name: "home",
   },
-  '#about': {
-    name: 'about',
+  about: {
+    name: "about",
   },
-  '#projects': {
-    name: 'projects',
+  projects: {
+    name: "projects",
   },
-  '#contact': {
-    name: 'contact',
+  contact: {
+    name: "contact",
   },
 };
 
-
 function Logo() {
   return (
-    <Link aria-label="Antonio Karam" href="/">
+    <Link aria-label="Antonio Karam" to="/">
       {/* Motion SVG Logo Or SMTH Can Go Here */}
     </Link>
   );
 }
 
 export default function Navbar() {
-  const [active, setActive] = useState('#home');
+  const [active, setActive] = useState("home");
 
   const handleSetActive = (id: any) => {
     setActive(id);
-    console.log(active);
   };
-
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
@@ -51,17 +48,20 @@ export default function Navbar() {
             id="nav"
           >
             <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return(
-                <Link
-                    href={path}
+              {Object.entries(navItems).map(([path, { name }]) => {
+                return (
+                  <Link
+                    to={path}
                     key={path}
-                    onClick={() => handleSetActive(path)}
+                    offset={path === "home" ? -500 : 0}
+                    onClick={() => {
+                      handleSetActive(path);
+                    }}
                     className={clsx(
-                      'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
+                      "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle",
                       {
-                        'text-neutral-500': !(active === path),
-                        'font-regular': (active === path),
+                        "text-neutral-500": !(active === path),
+                        "font-regular": active === path,
                       }
                     )}
                   >
@@ -72,7 +72,7 @@ export default function Navbar() {
                           className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md z-[-1]"
                           layoutId="sidebar"
                           transition={{
-                            type: 'spring',
+                            type: "spring",
                             stiffness: 350,
                             damping: 30,
                           }}
@@ -80,12 +80,11 @@ export default function Navbar() {
                       ) : null}
                     </span>
                   </Link>
-              );
-            })}
+                );
+              })}
             </div>
           </nav>
         </LayoutGroup>
-
       </div>
     </aside>
   );
