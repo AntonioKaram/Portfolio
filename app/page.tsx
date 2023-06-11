@@ -8,7 +8,7 @@ import {
   GitHubIcon,
   Resume,
   LinkedIN,
-  YoutubeIcon,
+  Email,
 } from "../components/icons";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -397,22 +397,61 @@ export default function Home() {
 
 
       </section>
-
-      <section id="contact">
+      <section id="contact" className="min-h-screen">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <h1 className="font-bold text-3xl font-serif">Contact Me</h1>
         <p className="my-5 text-neutral-800 dark:text-neutral-200">
-          Some contact information stuff goes here
+          Feel free to reach out!!
         </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <hr />
         <br/>
 
+        <div className="flex flex-col gap-2 md:flex-row md:gap-2 max-w-[700px]">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/antonio-karam/"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+          >
+            <div className="flex items-center">
+              <LinkedIN />
+              <div className="ml-3">LinkedIn</div>
+            </div>
+            <ArrowIcon />
+          </a>
+
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/AntonioKaram"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+          >
+            <div className="flex items-center">
+              <GitHubIcon />
+              <div className="ml-3">GitHub</div>
+            </div>
+            <ArrowIcon />
+          </a>
+
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="mailto: akaram@nd.edu"
+            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+          download>
+            <div className="flex items-center">
+              <Email />
+              <div className="ml-3">Email</div>
+            </div>
+            <ArrowIcon />
+          </a>
+        </div>
       </section>
+      <div className="fixed inset-x-0 bottom-0"> </div>  
     </main>
+    
   );
 }
