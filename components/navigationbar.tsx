@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import { LayoutGroup, motion } from "framer-motion";
 
 const navItems = {
@@ -28,12 +28,37 @@ function Logo() {
   );
 }
 
+
 export default function Navbar() {
   const [active, setActive] = useState("home");
 
   const handleSetActive = (id: any) => {
     setActive(id);
   };
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll("section");
+  
+    let currentSection = "";
+  
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+  
+      if (window.scrollY >= sectionTop - sectionHeight / 4) {
+        currentSection = section.getAttribute("id") ?? "";
+      }
+    });
+  
+    setActive(currentSection);
+  };
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif ">
@@ -62,6 +87,7 @@ export default function Navbar() {
                       {
                         "text-neutral-500": !(active === path),
                         "font-regular": active === path,
+                        "active": active == path,
                       }
                     )}
                   >

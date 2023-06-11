@@ -18,7 +18,7 @@ export default function Home() {
     <main>
       <section id="home">
         <h1 className="font-bold text-3xl font-serif">{name}</h1>
-        <p className="text-justify my-5 max-w-[700px] text-neutral-800 dark:text-neutral-200">
+        <p className="md:text-justify my-5 max-w-[700px] text-neutral-800 dark:text-neutral-200">
           {about()}
         </p>
         <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
@@ -288,7 +288,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p className="text-justify my-5 max-w-[700px] text-neutral-800 dark:text-neutral-200">
+        <p className="md:text-justify my-5 max-w-[700px] text-neutral-800 dark:text-neutral-200">
           {bio()}
         </p>
 
@@ -336,17 +336,66 @@ export default function Home() {
       </section>
 
       <section id="about">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <h1 className="font-bold text-3xl font-serif">About Me</h1>
-        <p className="my-5 text-neutral-800 dark:text-neutral-200">
-          This is my about page.
+
+        <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200">
+        <p>
+            My name is Antonio Karam, and I am currently a junior studying computer engineering at the <b>University of Notre Dame</b>.
         </p>
+        <p>
+            Alongside that, I am pursing a concentration in <b>Cybersecurity</b>, and a minor in <b>Engineering Corportate Practice</b>.
+        </p>
+        <hr />
+
+        <p>My curiosity was initially drawn to the puzzle-like nature of security problems, which lead me to majoring in Computer Engineering in an effort to dissect both the hardware and software sides of computer systems and exposing their vulnerabilities. </p>
+        <p>Software Engineering, on the other hand, complements that passion but adds a layer of creativity and ingenuity that fuels my drive to develop programs and systems that help serve people all over the world.  </p>
+        <p>I can confidently say that the two fields go hand in hand with each other very well. As our world becomes more tech-dependent, software engineers must be able to enhance the security of their programs in order to protect the people they serve, and cybersecurity specialists are tasked with finding vulnerabilities in those programs before malicious actors do.</p>
+        <br/>
+        </div>
       </section>
 
       <section id="projects">
+        <br/>
+        <br/>
+        <br/>
         <h1 className="font-bold text-3xl font-serif">Projects</h1>
         <p className="my-5 text-neutral-800 dark:text-neutral-200">
           List of projects goes here
         </p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+
       </section>
 
       <section id="contact">
@@ -354,45 +403,16 @@ export default function Home() {
         <p className="my-5 text-neutral-800 dark:text-neutral-200">
           Some contact information stuff goes here
         </p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
       </section>
     </main>
   );
 }
-
-
-
-
-{/* <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              // href=""  add link here
-              className="flex items-center gap-2"
-            >
-              <TwitterIcon />
-               `${tweetCount.toLocaleString()} tweets all time`}
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/AntonioKaram"
-              className="flex items-center gap-2"
-            >
-              <GitHubIcon />
-              {`${starCount.toLocaleString()} stars on this repo`} 
-            </a>
-
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://linkedin.com/in/antonio-karam"
-              className="flex items-center gap-2"
-            >
-              <LinkedIN />
-            </a>
-
-            <Link href="/blog" className="flex items-center">
-              <ViewsIcon />
-              {`${views.toLocaleString()} blog views all time`}
-            </Link>
-          </div> */}
