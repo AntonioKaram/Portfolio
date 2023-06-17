@@ -20,7 +20,7 @@ export const bio = () => {
       <br />
       What drives my passion towards the intersection of those fileds is their
       incorporation of all the components of our tech-driven world: hardware,
-      software, and communications. This means that I get to utilize my
+      software, and networks. This means that I get to use my
       experience in different fields, from <b>programing</b>, to
       <b> electronics</b>, <b>computer security</b>, <b>web development</b>, and{" "}
       <b>network protocols</b>, to solve problems in a unique and sustainable

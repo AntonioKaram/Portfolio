@@ -45,7 +45,7 @@ export default function Navbar() {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
   
-      if (window.scrollY >= sectionTop - sectionHeight / 4) {
+      if (window.scrollY >= sectionTop - sectionHeight / 100) {
         currentSection = section.getAttribute("id") ?? "";
       }
     });
