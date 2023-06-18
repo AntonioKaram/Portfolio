@@ -511,7 +511,7 @@ export default function Home() {
             computer systems and exposing their vulnerabilities.{" "}
           </p>
           <p>
-            Software Engineering, on the other hand, complements that passion
+            Software Engineering complements that passion
             but adds a layer of creativity and ingenuity that fuels my drive to
             develop programs and systems that help serve people all over the
             world.{" "}

@@ -18,10 +18,10 @@ export const bio = () => {
       solutions that withstand the test of time. In the tech industry, that means
       building adaptable and scalable solutions. <br />
       <br />
-      What drives my passion towards the intersection of those fileds is their
+      What drives my passion towards the intersection of those fields is their
       incorporation of all the components of our tech-driven world: hardware,
       software, and networks. This means that I get to use my
-      experience in different fields, from <b>programming</b>, to
+      experience in different areas, from <b>programming</b>, to
       <b> electronics</b>, <b>computer security</b>, <b>web development</b>, and{" "}
       <b>network protocols</b>, to solve problems in a unique and sustainable
       way.
