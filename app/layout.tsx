@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     default: "Antonio Karam",
     template: "%s | Antonio Karam",
   },
-  description: "INSERT META HERE",
+  description: "Software Engineer and Cybersecurity Professional",
   openGraph: {
     title: "Antonio Karam",
-    description: "INSERT META HERE.",
-    url: "https://antoniokaram.dev",
+    description: "Software Engineer and Cybersecurity Professional",
+    url: "https://antoniokaram.com",
     siteName: "Antonio Karam",
     images: [
       {
-        url: "LOGO",
-        width: 1920,
-        height: 1080,
+        url: "https://antoniokaram.com/logo.png",
+        width: 500,
+        height: 500,
       },
     ],
     locale: "en-US",
@@ -44,16 +44,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Antonio Karam",
-    card: "summary_large_image",
-  },
   icons: {
     shortcut: "/favicon.ico",
   },
   verification: {
-    google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
-    yandex: "14d2e73487fa6c71",
+    google: "uj2R7l-IsXd161QLlBezgAhigrva8j6I1XMlQgRKXlQ",
   },
 };
 
