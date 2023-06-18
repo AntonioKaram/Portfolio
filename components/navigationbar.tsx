@@ -47,10 +47,8 @@ function Logo() {
           }}
           className="dark:fill-[#ffffff] #000000"
           d="M 0.0078125 374.992188 L 304.386719 374.992188 C 343.386719 374.992188 375 343.378906 375 304.378906 L 375 0 L 70.621094 0 C 31.621094 0 0.0078125 31.613281 0.0078125 70.613281 Z M 0.0078125 374.992188 "
-          fill-opacity="1"
-          fill-rule="nonzero"
         />
-        <g className="dark:fill-[#000000] #ffffff" fill-opacity="1">
+        <g className="dark:fill-[#000000] #ffffff">
           <g transform="translate(24.837894, 269.57073)">
             <g>
               <motion.path
@@ -65,7 +63,7 @@ function Logo() {
             </g>
           </g>
         </g>
-        <g className="dark:fill-[#000000] #ffffff" fill-opacity="1">
+        <g className="dark:fill-[#000000] #ffffff" >
           <g transform="translate(193.153587, 269.57073)">
             <g>
               <motion.path
@@ -122,7 +120,7 @@ export default function Navbar() {
         <div className="ml-3 md:ml-2 mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row justify-start">
           <Logo />
         </div>
-
+        
         <LayoutGroup>
           <nav
             className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"

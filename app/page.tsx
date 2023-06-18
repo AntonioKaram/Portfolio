@@ -485,9 +485,11 @@ export default function Home() {
       </section>
 
       <section id="about">
+        <div className="hidden sm:block">
         <br />
         <br />
         <br />
+        </div>
         <br />
         <h1 className="font-bold text-3xl font-serif">About Me</h1>
 
@@ -527,10 +529,12 @@ export default function Home() {
       </section>
 
       <section id="projects">
+        <div className="hidden sm:block">
         <br />
         <br />
         <br />
         <br />
+        </div>
         <h1 className="font-bold text-3xl font-serif">Projects</h1> <br />
         <hr />
         <br />
@@ -645,15 +649,19 @@ export default function Home() {
       </section>
 
       <section id="contact" className="min-h-screen">
+      <div className="hidden sm:block">
         <br />
         <br />
+        </div>
         <br />
         <br />
         <h1 className="font-bold text-3xl font-serif">Contact Me</h1>
         <br />
         <hr />
+        <div className="hidden sm:block">
         <br />
-        <div className="mt-8 flex flex-col sm:flex-row">
+        </div>
+        <div className="mt-3 flex flex-col sm:flex-row">
           <div className="flex-1 mt-8 sm:mt-0 sm:ml-8">
             <div className="dark:bg-neutral-100 bg-[#121212] overflow-hidden shadow-sm rounded-lg">
               <div className="px-4 py-5 sm:p-6">

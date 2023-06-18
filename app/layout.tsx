@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     default: "Antonio Karam",
     template: "%s | Antonio Karam",
   },
+  metadataBase: new URL("https://antoniokaram.com"),
   description: "Software Engineer and Cybersecurity Professional",
   openGraph: {
     title: "Antonio Karam",
