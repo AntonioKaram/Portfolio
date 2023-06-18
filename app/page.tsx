@@ -15,50 +15,26 @@ const projects = [
   {
     id: 1,
     title: "Dunne Hall Website",
-    description: "This is project 1",
-    imageUrl: "",
+    description: "Built, deployed, and managed the dunnehall.com website to promote the culture and values of Notre Dame's Dunne Hall community.",
+    imageUrl: "/dunne.png",
+    githubLink: "https://github.com/AntonioKaram/DunneHall-Website",
+    websiteLink: "https://dunnehall.com",
   },
   {
     id: 2,
     title: "Music & Happiness",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
+    description: "Tracks Spotify user trends by country and links them to the happiness index, education levels, and GDP of the country. The data gives indications of the correlation between artist, genre, and socioeconomic standards and indicators across the world, over time.",
+    imageUrl: "/music.png",
+    githubLink: "",
+    websiteLink: "https://github.com/AntonioKaram/MusicData",
   },
   {
     id: 3,
-    title: "OneAmerica Broker Tool",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
-  },
-  {
-    id: 4,
-    title: "Generic Evolution Algorithm",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
-  },
-  {
-    id: 5,
-    title: "Python Challenges",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
-  },
-  {
-    id: 6,
     title: "Storage Finder",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
-  },
-  {
-    id: 7,
-    title: "RSA Encryption Hardware Accelerator",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
-  },
-  {
-    id: 8,
-    title: "Legacy Software Security Upgrades",
-    description: "This is project 2",
-    imageUrl: "/images/project2.jpg",
+    description: "A tool that allows faculty, researchers, and students to identify the tools they need to store their data given different constraints such as visibility, scale, and compliance ",
+    imageUrl: "/storagefinder.png",
+    githubLink: "",
+    websiteLink: "",
   },
   // Add more projects as needed
 ];
@@ -306,11 +282,7 @@ export default function Home() {
               </svg>
             </a>
 
-            <a
-              href="https://www.docker.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
               <svg
                 height="36"
                 viewBox="25 200 210 210"
@@ -451,7 +423,6 @@ export default function Home() {
                 width="36"
                 alt="Creative Cloud"
               />
-                
             </a>
 
             <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
@@ -526,8 +497,8 @@ export default function Home() {
             computer engineering at the <b>University of Notre Dame</b>.
           </p>
           <p>
-            Alongside that, I am pursing a concentration in <b>Cybersecurity</b>
-            , and a minor in <b>Engineering Corportate Practice</b>.
+            Alongside that, I am pursing a concentration in <b>cybersecurity</b>
+            , and a minor in <b>engineering corportate practice</b>.
           </p>
           <hr />
 
@@ -560,25 +531,116 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <h1 className="font-bold text-3xl font-serif">Projects</h1>
-        <p className="my-5 text-neutral-800 dark:text-neutral-200">
-          List of projects goes here
-        </p>
+        <h1 className="font-bold text-3xl font-serif">Projects</h1> <br />
+        <hr />
+        <br />
         <div className="grid grid-cols-1 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white dark:bg-[#121212] rounded-lg shadow-sm hover:shadow-xl p-4 w-full border border-neutral-200 dark:border-neutral-800 no-underline items-center text-neutral-800 dark:text-neutral-200  hover:dark:bg-neutral-900 transition-all justify-between"
-            >
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-48 object-cover mb-4 rounded-md"
-              />
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600">{project.description}</p>
-            </div>
-          ))}
+          {projects.map(function (project) {
+            if (project.id % 2 == 0) {
+              return (
+                <div
+                  key={project.id}
+                  className="bg-neutral-100 dark:bg-[#121212] h-auto flex flex-col sm:flex-row rounded-lg shadow-sm hover:shadow-xl p-6 w-full border border-neutral-200 dark:border-neutral-800 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 transition-all justify-between overflow-hidden"
+                >
+                  <div className="flex-1 hidden sm:block">
+                    <div className="max-h-72 overflow-hidden rounded-lg">
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col h-full max-h-72 text-center p-3">
+                      <h3 className="text-xl font-bold mb-2 ">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-neutral-100 mb-4">
+                        {project.description}
+                      </p>
+
+                      <div className="flex space-x-2 justify-center">
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                        >
+                          <GitHubIcon />
+                        </a>
+                        <a
+                          href={project.websiteLink}
+                          target="_blank"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 5 48 48"
+                            width="30"
+                            height="30"
+                            className="dark:fill-neutral-100"
+                          >
+                            <path d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div
+                  key={project.id}
+                  className="bg-white h-auto flex flex-col sm:flex-row dark:bg-[#121212] rounded-lg shadow-sm hover:shadow-xl p-6 w-full border border-neutral-200 dark:border-neutral-800 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 transition-all justify-between overflow-hidden"
+                >
+                  <div className="flex-1">
+                    <div className="flex flex-col max-h-72 text-center p-3">
+                      <h3 className="text-xl font-bold mb-2 ">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-neutral-100 mb-4">
+                        {project.description}
+                      </p>
+
+                      <div className="flex space-x-2 justify-center">
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                        >
+                          <GitHubIcon />
+                        </a>
+                        <a
+                          href={project.websiteLink}
+                          target="_blank"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 5 48 48"
+                            width="30"
+                            height="30"
+                            className="dark:fill-neutral-100"
+                          >
+                            <path d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex-1 hidden sm:block">
+                    <div className="max-h-72 overflow-hidden rounded-lg" >
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        
+                        className="w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+              );
+            }
+          })}
         </div>
       </section>
 
@@ -588,52 +650,85 @@ export default function Home() {
         <br />
         <br />
         <h1 className="font-bold text-3xl font-serif">Contact Me</h1>
-        <p className="my-5 text-neutral-800 dark:text-neutral-200">
-          Feel free to reach out!!
-        </p>
+        <br />
         <hr />
         <br />
-
-        <div className="flex flex-col gap-2 md:flex-row md:gap-2 max-w-[700px]">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/antonio-karam/"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
-          >
-            <div className="flex items-center">
-              <LinkedIN />
-              <div className="ml-3">LinkedIn</div>
+        <div className="mt-8 flex flex-col sm:flex-row">
+          <div className="flex-1 mt-8 sm:mt-0 sm:ml-8">
+            <div className="dark:bg-neutral-100 bg-[#121212] overflow-hidden shadow-sm rounded-lg">
+              <div className="px-4 py-5 sm:p-6">
+                <h3 className="text-lg leading-6 font-bold text-neutral-100 dark:text-[#121212]">
+                  Contact Information
+                </h3>
+                <div className="mt-4">
+                  <p className="text-base leading-6 text-neutral-100 dark:text-gray-500">
+                    Feel free to reach out to me using the contact information
+                    below.
+                  </p>
+                  <div className="mt-4">
+                    <p className="text-sm leading-5 font-bold text-neutral-100 dark:text-gray-900">
+                      Email
+                    </p>
+                    <p className="mt-1 text-sm leading-5 text-neutral-100 dark:text-gray-500">
+                      antonio.c.karam@gmail.com
+                    </p>
+                  </div>
+                  <div className="mt-4">
+                    <p className="text-sm leading-5 font-bold text-neutral-100 dark:text-gray-900">
+                      Phone
+                    </p>
+                    <p className="mt-1 text-sm leading-5 text-neutral-100 dark:text-gray-500">
+                      +1 (574) 621-1852
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ArrowIcon />
-          </a>
+          </div>
 
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/AntonioKaram"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
-          >
-            <div className="flex items-center">
-              <GitHubIcon />
-              <div className="ml-3">GitHub</div>
-            </div>
-            <ArrowIcon />
-          </a>
+          <div className="flex-1 mt-8 sm:mt-0 sm:ml-8">
+            <div className="flex flex-col gap-2 md:gap-2 max-w-[700px] h-full">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/in/antonio-karam/"
+                className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+              >
+                <div className="flex items-center">
+                  <LinkedIN />
+                  <div className="ml-3">LinkedIn</div>
+                </div>
+                <ArrowIcon />
+              </a>
 
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="mailto: akaram@nd.edu"
-            className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
-            download
-          >
-            <div className="flex items-center">
-              <Email />
-              <div className="ml-3">Email</div>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/AntonioKaram"
+                className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+              >
+                <div className="flex items-center">
+                  <GitHubIcon />
+                  <div className="ml-3">GitHub</div>
+                </div>
+                <ArrowIcon />
+              </a>
+
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="mailto: antonio.c.karam@gmail.com"
+                className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
+                download
+              >
+                <div className="flex items-center">
+                  <Email />
+                  <div className="ml-3">Email</div>
+                </div>
+                <ArrowIcon />
+              </a>
             </div>
-            <ArrowIcon />
-          </a>
+          </div>
         </div>
       </section>
       <div className="fixed inset-x-0 bottom-0"> </div>
