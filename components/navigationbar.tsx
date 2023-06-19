@@ -45,10 +45,10 @@ function Logo() {
             type: 'spring',
             stiffness: 50,
           }}
-          className="dark:fill-[#ffffff] #000000"
+          className="dark:fill-[#ffffff] fill-[#000000]"
           d="M 0.0078125 374.992188 L 304.386719 374.992188 C 343.386719 374.992188 375 343.378906 375 304.378906 L 375 0 L 70.621094 0 C 31.621094 0 0.0078125 31.613281 0.0078125 70.613281 Z M 0.0078125 374.992188 "
         />
-        <g className="dark:fill-[#000000] #ffffff">
+        <g className="dark:fill-[#000000] fill-[#ffffff]">
           <g transform="translate(24.837894, 269.57073)">
             <g>
               <motion.path
@@ -63,7 +63,7 @@ function Logo() {
             </g>
           </g>
         </g>
-        <g className="dark:fill-[#000000] #ffffff" >
+        <g className="dark:fill-[#000000] fill-[#ffffff]" >
           <g transform="translate(193.153587, 269.57073)">
             <g>
               <motion.path
