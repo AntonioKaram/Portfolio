@@ -22,7 +22,7 @@ const navItems = {
 
 function Logo() {
   return (
-    <Link aria-label="Antonio Karam" to="/">
+    <Link aria-label="Antonio Karam" to="https://antoniokaram.com">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
