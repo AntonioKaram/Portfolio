@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { name, about, bio, avatar } from "../lib/info";
@@ -16,7 +15,7 @@ const projects = [
     id: 1,
     title: "Dunne Hall Website",
     description: "Built, deployed, and managed the dunnehall.com website to promote the culture and values of Notre Dame's Dunne Hall community.",
-    imageUrl: "/dunne.png",
+    imageUrl: "/dunne.jpg",
     githubLink: "https://github.com/AntonioKaram/DunneHall-Website",
     websiteLink: "https://dunnehall.com",
   },
@@ -24,7 +23,7 @@ const projects = [
     id: 2,
     title: "Music & Happiness",
     description: "Tracks Spotify user trends by country and links them to the happiness index, education levels, and GDP of the country. The data gives indications of the correlation between artist, genre, and socioeconomic standards and indicators across the world, over time.",
-    imageUrl: "/music.png",
+    imageUrl: "/music.jpg",
     githubLink: "https://github.com/AntonioKaram/MusicData ",
     websiteLink: "https://music-and-happiness.vercel.app/",
   },
@@ -32,7 +31,7 @@ const projects = [
     id: 3,
     title: "Storage Finder",
     description: "A tool that allows faculty, researchers, and students to identify the tools they need to store their data given different constraints such as visibility, scale, and compliance ",
-    imageUrl: "/storagefinder.png",
+    imageUrl: "/storagefinder.jpg",
     githubLink: "",
     websiteLink: "",
   },
@@ -386,7 +385,7 @@ export default function Home() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="../public/resume.pdf"
+            href="/Antonio-Karam-Resume.pdf"
             className="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
             download
           >
@@ -415,7 +414,7 @@ export default function Home() {
             computer engineering at the <b>University of Notre Dame</b>.
           </p>
           <p>
-            Alongside that, I am pursing a concentration in <b>cybersecurity</b>
+            Alongside that, I am pursing a concentration in <b>cyber security</b>
             , and a minor in <b>engineering corportate practice</b>.
           </p>
           <hr />
@@ -436,7 +435,7 @@ export default function Home() {
             I can confidently say that the two fields go hand in hand with each
             other very well. As our world becomes more tech-dependent, software
             engineers must be able to enhance the security of their programs in
-            order to protect the people they serve, and cybersecurity
+            order to protect the people they serve, and cyber security
             specialists are tasked with finding vulnerabilities in those
             programs before malicious actors do.
           </p>

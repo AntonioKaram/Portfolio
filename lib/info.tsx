@@ -13,7 +13,7 @@ export const about = () => {
 export const bio = () => {
   return (
     <>
-      I am passionate about <b>cybersecurity</b> and <b>software engineering</b>.
+      I am passionate about <b>cyber security</b> and <b>software engineering</b>.
       My goal is to engineer resource-efficient
       solutions that withstand the test of time. In the tech industry, that means
       building adaptable and scalable solutions. <br />
