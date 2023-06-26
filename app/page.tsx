@@ -25,8 +25,8 @@ const projects = [
     title: "Music & Happiness",
     description: "Tracks Spotify user trends by country and links them to the happiness index, education levels, and GDP of the country. The data gives indications of the correlation between artist, genre, and socioeconomic standards and indicators across the world, over time.",
     imageUrl: "/music.png",
-    githubLink: "",
-    websiteLink: "https://github.com/AntonioKaram/MusicData",
+    githubLink: "https://github.com/AntonioKaram/MusicData ",
+    websiteLink: "https://music-and-happiness.vercel.app/",
   },
   {
     id: 3,
