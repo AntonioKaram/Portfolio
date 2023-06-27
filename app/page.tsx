@@ -415,7 +415,7 @@ export default function Home() {
           </p>
           <p>
             Alongside that, I am pursing a concentration in <b>cyber security</b>
-            , and a minor in <b>engineering corportate practice</b>.
+            , and a minor in <b>engineering corporate practice</b>.
           </p>
           <hr />
 
