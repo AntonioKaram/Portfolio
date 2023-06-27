@@ -640,7 +640,7 @@ export default function Home() {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="mailto: antonio.c.karam@gmail.com"
+                href="mailto:antonio.c.karam@gmail.com"
                 className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
                 download
               >
