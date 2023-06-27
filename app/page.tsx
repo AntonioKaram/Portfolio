@@ -32,8 +32,8 @@ const projects = [
     title: "Storage Finder",
     description: "A tool that allows faculty, researchers, and students to identify the tools they need to store their data given different constraints such as visibility, scale, and compliance ",
     imageUrl: "/storagefinder.jpg",
-    githubLink: "",
-    websiteLink: "",
+    githubLink: "https://github.com/AntonioKaram/storage-finder.git",
+    websiteLink: "http://storagefinder.s3-website.us-east-2.amazonaws.com/",
   },
   // Add more projects as needed
 ];
@@ -410,7 +410,7 @@ export default function Home() {
 
         <div className="prose prose-neutral md:text-justify max-w-[700px] dark:prose-invert text-neutral-800 dark:text-neutral-200">
           <p>
-            My name is Antonio Karam, and I am currently a junior studying
+            My name is Antonio Karam, and I am currently in my junior year studying
             computer engineering at the <b>University of Notre Dame</b>.
           </p>
           <p>
