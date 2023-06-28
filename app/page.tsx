@@ -8,6 +8,7 @@ import {
   Resume,
   LinkedIN,
   Email,
+  PhoneIcon,
 } from "../components/icons";
 
 const projects = [
@@ -58,6 +59,10 @@ export default function Home() {
             src={avatar}
             placeholder="blur"
             width={100}
+            style={{
+              width: "auto",
+              height: "auto",
+            }}
             priority
           />
 
@@ -669,12 +674,12 @@ export default function Home() {
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://github.com/AntonioKaram"
+                href="tel:+15746211852"
                 className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
               >
                 <div className="flex items-center">
-                  <GitHubIcon />
-                  <div className="ml-3">GitHub</div>
+                  <PhoneIcon />
+                  <div className="ml-3">Phone</div>
                 </div>
                 <ArrowIcon />
               </a>
