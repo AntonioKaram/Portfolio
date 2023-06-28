@@ -14,7 +14,8 @@ const projects = [
   {
     id: 1,
     title: "Dunne Hall Website",
-    description: "Built, deployed, and managed the dunnehall.com website to promote the culture and values of Notre Dame's Dunne Hall community.",
+    description:
+      "Built, deployed, and managed the dunnehall.com website to promote the culture and values of Notre Dame's Dunne Hall community.",
     imageUrl: "/dunne.jpg",
     githubLink: "https://github.com/AntonioKaram/DunneHall-Website",
     websiteLink: "https://dunnehall.com",
@@ -22,7 +23,8 @@ const projects = [
   {
     id: 2,
     title: "Music & Happiness",
-    description: "Tracks Spotify user trends by country and links them to the happiness index, education levels, and GDP of the country. The data gives indications of the correlation between artist, genre, and socioeconomic standards and indicators across the world, over time.",
+    description:
+      "Tracks Spotify user trends by country and links them to the happiness index, education levels, and GDP of the country. The data gives indications of the correlation between artist, genre, and socioeconomic standards and indicators across the world, over time.",
     imageUrl: "/music.jpg",
     githubLink: "https://github.com/AntonioKaram/MusicData ",
     websiteLink: "https://music-and-happiness.vercel.app/",
@@ -30,7 +32,8 @@ const projects = [
   {
     id: 3,
     title: "Storage Finder",
-    description: "A tool that allows faculty, researchers, and students to identify the tools they need to store their data given different constraints such as visibility, scale, and compliance ",
+    description:
+      "A tool that allows faculty, researchers, and students to identify the tools they need to store their data given different constraints such as visibility, scale, and compliance ",
     imageUrl: "/storagefinder.jpg",
     githubLink: "https://github.com/AntonioKaram/storage-finder.git",
     websiteLink: "http://storagefinder.s3-website.us-east-2.amazonaws.com/",
@@ -281,7 +284,14 @@ export default function Home() {
               </svg>
             </a>
 
-            <a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker-svgrepo-com.svg" width="40" height="40" alt="Docker"/></a>
+            <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker-svgrepo-com.svg"
+                width="40"
+                height="40"
+                alt="Docker"
+              />
+            </a>
 
             <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
               <img
@@ -305,9 +315,28 @@ export default function Home() {
               />
             </a>
 
-            <a href="https://www.ibm.com/docs/en/zos/2.1.0?topic=introduction-assembler-language" target="_blank" rel="noreferrer"><img src="https://svgshare.com/i/uRr.svg" width="36" height="36" alt="Assembly"/></a>
+            <a
+              href="https://www.ibm.com/docs/en/zos/2.1.0?topic=introduction-assembler-language"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="https://svgshare.com/i/uRr.svg"
+                width="36"
+                height="36"
+                alt="Assembly"
+              />
+            </a>
 
-            <a href="https://www.verilog.com/" target="_blank" rel="noreferrer"><img src="https://svgshare.com/i/uU1.svg" width="36" height="36" alt="Verilog" className="dark:fill-[#c28c3a] fill-black"/></a>
+            <a href="https://www.verilog.com/" target="_blank" rel="noreferrer">
+              <img
+                src="https://svgshare.com/i/uU1.svg"
+                width="36"
+                height="36"
+                alt="Verilog"
+                className="dark:fill-[#c28c3a] fill-black"
+              />
+            </a>
 
             <a
               href="https://www.hackthebox.com/"
@@ -325,7 +354,14 @@ export default function Home() {
               </svg>
             </a>
 
-            <a href="https://tableau.com/" target="_blank" rel="noreferrer"><img src="https://svgshare.com/i/uRK.svg" width="36" height="36" alt="Tableau"/></a>
+            <a href="https://tableau.com/" target="_blank" rel="noreferrer">
+              <img
+                src="https://svgshare.com/i/uRK.svg"
+                width="36"
+                height="36"
+                alt="Tableau"
+              />
+            </a>
 
             <a
               href="https://www.adobe.com/creativecloud.html"
@@ -401,54 +437,74 @@ export default function Home() {
 
       <section id="about">
         <div className="hidden sm:block">
-        <br />
-        <br />
-        <br />
+          <br />
+          <br />
+          <br />
         </div>
         <br />
         <h1 className="font-bold text-3xl font-serif">About Me</h1>
 
         <div className="prose prose-neutral md:text-justify max-w-[700px] dark:prose-invert text-neutral-800 dark:text-neutral-200">
+          <h4 className="text-l">
+            {" "}
+            "Driven and skilled computer engineering student interested in
+            software engineering and cyber security."
+          </h4>
           <p>
-            My name is Antonio Karam, and I am currently in my junior year studying
-            computer engineering at the <b>University of Notre Dame</b>.
+            My name is Antonio Karam, and I am currently in my junior year
+            studying computer engineering at the <b>University of Notre Dame</b>
+            .
           </p>
           <p>
-            Alongside that, I am pursing a concentration in <b>cyber security</b>
-            , and a minor in <b>engineering corporate practice</b>.
+            Alongside that, I am pursuing a concentration in{" "}
+            <b>cyber security</b>, and a minor in{" "}
+            <b>engineering corporate practice</b>.
           </p>
           <hr />
 
           <p>
             My curiosity was initially drawn to the puzzle-like nature of
-            security problems, which lead me to majoring in Computer Engineering
-            in an effort to dissect both the hardware and software sides of
-            computer systems and exposing their vulnerabilities.{" "}
+            security problems, which led me to major in Computer Engineering in
+            an effort to dissect both the hardware and software sides of
+            computer systems and expose their vulnerabilities. The more I
+            learned about cybersecurity, the more I realized its criticality in
+            safeguarding individuals and organizations and its ever-growing
+            prominence in our tech-driven world, especially within software
+            development.{" "}
           </p>
           <p>
-            Software Engineering complements that passion
-            but adds a layer of creativity and ingenuity that fuels my drive to
-            develop programs and systems that help serve people all over the
-            world.{" "}
+            Software engineering complements that passion but adds a layer of
+            creativity and ingenuity that fuels my drive to develop programs and
+            systems that help serve people all over the world. I strive to build
+            solutions that are not only resource-efficient but also sustainable,
+            scalable, and adaptable. Achieving this goal requires a relentless
+            passion for learning about available and emerging technologies - a
+            skill I am proud to have. I am fascinated by the ever-evolving
+            landscape of tech innovation, and it is this fascination that
+            motivates me to delve deeper into the world of technology,
+            continuously seeking out new knowledge and skills to ensure I stay
+            at the forefront of this dynamic industry.{" "}
           </p>
           <p>
-            I can confidently say that the two fields go hand in hand with each
-            other very well. As our world becomes more tech-dependent, software
-            engineers must be able to enhance the security of their programs in
-            order to protect the people they serve, and cyber security
-            specialists are tasked with finding vulnerabilities in those
-            programs before malicious actors do.
+            Throughout my undergraduate career, I have taken on various leadership
+            positions, from acting as the Vice President of my university's
+            Engineers Without Borders chapter to leading development teams at CS
+            For Good.
           </p>
-          <br />
+          <p>
+            I expect to graduate in May 2025, and I am currently interested in
+            an internship position for the summer of 2024. Feel free to check
+            out my projects and reach out to me!
+          </p>
         </div>
       </section>
 
       <section id="projects">
         <div className="hidden sm:block">
-        <br />
-        <br />
-        <br />
-        <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
         <h1 className="font-bold text-3xl font-serif">Projects</h1> <br />
         <hr />
@@ -480,16 +536,10 @@ export default function Home() {
                       </p>
 
                       <div className="flex space-x-2 justify-center">
-                        <a
-                          href={project.githubLink}
-                          target="_blank"
-                        >
+                        <a href={project.githubLink} target="_blank">
                           <GitHubIcon />
                         </a>
-                        <a
-                          href={project.websiteLink}
-                          target="_blank"
-                        >
+                        <a href={project.websiteLink} target="_blank">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 5 48 48"
@@ -521,16 +571,10 @@ export default function Home() {
                       </p>
 
                       <div className="flex space-x-2 justify-center">
-                        <a
-                          href={project.githubLink}
-                          target="_blank"
-                        >
+                        <a href={project.githubLink} target="_blank">
                           <GitHubIcon />
                         </a>
-                        <a
-                          href={project.websiteLink}
-                          target="_blank"
-                        >
+                        <a href={project.websiteLink} target="_blank">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 5 48 48"
@@ -546,16 +590,14 @@ export default function Home() {
                   </div>
 
                   <div className="flex-1 hidden sm:block">
-                    <div className="max-h-72 overflow-hidden rounded-lg" >
+                    <div className="max-h-72 overflow-hidden rounded-lg">
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        
                         className="w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4"
                       />
                     </div>
                   </div>
-
                 </div>
               );
             }
@@ -564,9 +606,9 @@ export default function Home() {
       </section>
 
       <section id="contact" className="min-h-screen">
-      <div className="hidden sm:block">
-        <br />
-        <br />
+        <div className="hidden sm:block">
+          <br />
+          <br />
         </div>
         <br />
         <br />
@@ -574,7 +616,7 @@ export default function Home() {
         <br />
         <hr />
         <div className="hidden sm:block">
-        <br />
+          <br />
         </div>
         <div className="mt-3 flex flex-col sm:flex-row">
           <div className="flex-1 mt-8 sm:mt-0 sm:ml-8">
