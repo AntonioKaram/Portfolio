@@ -505,12 +505,13 @@ export default function Home() {
       </section>
 
       <section id="projects">
-        <div className="hidden sm:block">
-          <br />
-          <br />
-          <br />
-          <br />
+        <div className=" hidden sm:block">
+        <br />
+        <br />
         </div>
+        <br />
+        <br />
+        
         <h1 className="font-bold text-3xl font-serif">Projects</h1> <br />
         <hr />
         <br />
