@@ -59,7 +59,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Operating Systems Fundementals",
+    title: "Operating Systems Fundamentals",
     description:
       "Designed and tested a Process Scheduler (FIFO, Round Robin), Heap Management (malloc, calloc), and File System (Unix) in C/C++ using system calls, paging, and multithreading",
     imageUrl: "/fs.gif",
