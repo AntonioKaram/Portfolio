@@ -570,10 +570,10 @@ export default function Home() {
                       </p>
 
                       <div className="flex space-x-2 justify-center">
-                        <a href={project.githubLink} target="_blank">
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                           {(project.githubLink != "") ? <GitHubIcon /> : ""}
                         </a>
-                        <a href={project.websiteLink} target="_blank">
+                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
                         {(project.githubLink != "") ?  
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -606,10 +606,10 @@ export default function Home() {
                       </p>
 
                       <div className="flex space-x-2 justify-center">
-                        <a href={project.githubLink} target="_blank">
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                         {(project.githubLink != "") ? <GitHubIcon /> : ""}
                         </a>
-                        <a href={project.websiteLink} target="_blank">
+                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
                         {(project.githubLink != "") ? 
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
