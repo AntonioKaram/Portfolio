@@ -39,6 +39,34 @@ const projects = [
     githubLink: "https://github.com/AntonioKaram/storage-finder.git",
     websiteLink: "http://storagefinder.s3-website.us-east-2.amazonaws.com/",
   },
+  {
+    id: 4,
+    title: "Linear Shift Feedback Register Chip",
+    description:
+      "Proposed, designed, and tested, and synthesized an 8-bit LFSR chip in Verilog for the Google-Sponsored eFabless digital GF180nm shuttle, passing the Multi-Project Wafer and Tapeout tests.",
+    imageUrl: "/lfsr.png",
+    githubLink: "https://github.com/AntonioKaram/Final-Project-LFSR",
+    websiteLink: "https://platform.efabless.com/shuttles/GFMPW-1",
+  },
+  {
+    id: 5,
+    title: "Multithreaded HTTP Client/Server",
+    description:
+      "Designed and tested a client that makes parallel HTTP requests and a Pub/Sub Server with channels and conversations in Python, Bash, and C/C++ using networking, system calls, and sockets",
+    imageUrl: "/cliserv.png",
+    githubLink: "",
+    websiteLink: "",
+  },
+  {
+    id: 6,
+    title: "Operating Systems Fundementals",
+    description:
+      "Designed and tested a Process Scheduler (FIFO, Round Robin), Heap Management (malloc, calloc), and File System (Unix) in C/C++ using system calls, paging, and multithreading",
+    imageUrl: "/fs.gif",
+    githubLink: "",
+    websiteLink: "",
+  },
+
   // Add more projects as needed
 ];
 
@@ -528,7 +556,7 @@ export default function Home() {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4"
+                        className={(project.id < 4) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "h-72 rounded-lg" }
                       />
                     </div>
                   </div>
@@ -543,9 +571,10 @@ export default function Home() {
 
                       <div className="flex space-x-2 justify-center">
                         <a href={project.githubLink} target="_blank">
-                          <GitHubIcon />
+                          {(project.githubLink != "") ? <GitHubIcon /> : ""}
                         </a>
                         <a href={project.websiteLink} target="_blank">
+                        {(project.githubLink != "") ?  
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 5 48 48"
@@ -554,7 +583,7 @@ export default function Home() {
                             className="dark:fill-neutral-100"
                           >
                             <path d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z" />
-                          </svg>
+                          </svg> : ""}
                         </a>
                       </div>
                     </div>
@@ -578,9 +607,10 @@ export default function Home() {
 
                       <div className="flex space-x-2 justify-center">
                         <a href={project.githubLink} target="_blank">
-                          <GitHubIcon />
+                        {(project.githubLink != "") ? <GitHubIcon /> : ""}
                         </a>
                         <a href={project.websiteLink} target="_blank">
+                        {(project.githubLink != "") ? 
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 5 48 48"
@@ -589,7 +619,7 @@ export default function Home() {
                             className="dark:fill-neutral-100"
                           >
                             <path d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z" />
-                          </svg>
+                          </svg> : ""}
                         </a>
                       </div>
                     </div>
@@ -600,7 +630,7 @@ export default function Home() {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4"
+                        className={(project.id < 4) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "object-none h-72 rounded-lg" }
                       />
                     </div>
                   </div>
