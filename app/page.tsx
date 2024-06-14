@@ -674,14 +674,7 @@ export default function Home() {
                       antonio.c.karam@gmail.com
                     </p>
                   </div>
-                  <div className="mt-4">
-                    <p className="text-sm leading-5 font-bold text-neutral-100 dark:text-gray-900">
-                      Phone
-                    </p>
-                    <p className="mt-1 text-sm leading-5 text-neutral-100 dark:text-gray-500">
-                      +1 (574) 621-1852
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
