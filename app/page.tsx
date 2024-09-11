@@ -13,6 +13,15 @@ import {
 
 const projects = [
   {
+    id: 0,
+    title: "Freecell AI Solver",
+    description:
+      "Reversed engineered Windows XP Freecell using static and dynamic analysis and implemented AI search algorithms to find an optimal win strategy for the current game.",
+    imageUrl: "/freecell.png",
+    githubLink: "https://github.com/AntonioKaram/Freecell-AI-Solver",
+    websiteLink: "https://drive.google.com/file/d/1IDUjCIZfACdZfAUUqpGrJCJtGphgBFVK/view?usp=sharing",
+  },
+  {
     id: 1,
     title: "Dunne Hall Website",
     description:
@@ -43,7 +52,7 @@ const projects = [
     id: 4,
     title: "Linear Shift Feedback Register Chip",
     description:
-      "Proposed, designed, and tested, and synthesized an 8-bit LFSR chip in Verilog for the Google-Sponsored eFabless digital GF180nm shuttle, passing the Multi-Project Wafer and Tapeout tests.",
+      "Proposed, designed, and tested, and synthesized an 8-bit LFSR chip in Verilog and won the Google-Sponsored eFabless digital GF180nm shuttle, passing the Multi-Project Wafer and Tapeout tests.",
     imageUrl: "/lfsr.png",
     githubLink: "https://github.com/AntonioKaram/Final-Project-LFSR",
     websiteLink: "https://platform.efabless.com/shuttles/GFMPW-1",
@@ -67,7 +76,6 @@ const projects = [
     websiteLink: "",
   },
 
-  // Add more projects as needed
 ];
 
 const inter = Inter({ subsets: ["latin"] });
@@ -484,14 +492,14 @@ export default function Home() {
             software engineering and cyber security."
           </h4>
           <p>
-            My name is Antonio Karam, and I am currently in my junior year
+            My name is Antonio Karam, and I am currently in my senior year
             studying computer engineering at the <b>University of Notre Dame</b>
             .
           </p>
           <p>
-            Alongside that, I am pursuing a concentration in{" "}
-            <b>cyber security</b>, and a minor in{" "}
-            <b>engineering corporate practice</b>.
+            Alongside that, I am pursuing concentrations in{" "}
+            <b>Cyber Security</b> and {" "}
+            <b>Aritifical Intelligence (AI)</b>.
           </p>
           <hr />
 
@@ -520,13 +528,13 @@ export default function Home() {
           </p>
           <p>
             Throughout my undergraduate career, I have taken on various leadership
-            positions, from acting as the Vice President of my university's
+            positions, from acting as the President of my university's
             Engineers Without Borders chapter to leading development teams at CS
             For Good.
           </p>
           <p>
             I expect to graduate in May 2025, and I am currently interested in
-            an internship position for the summer of 2024. Feel free to check
+            a full time position. Feel free to check
             out my projects and reach out to me!
           </p>
         </div>
@@ -556,7 +564,7 @@ export default function Home() {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className={(project.id < 4) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "h-72 rounded-lg" }
+                        className={(project.id < 4 && project.id != 0) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "h-72 rounded-lg" }
                       />
                     </div>
                   </div>
@@ -691,19 +699,6 @@ export default function Home() {
                 <div className="flex items-center">
                   <LinkedIN />
                   <div className="ml-3">LinkedIn</div>
-                </div>
-                <ArrowIcon />
-              </a>
-
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="tel:+15746211852"
-                className="flex h-full w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between"
-              >
-                <div className="flex items-center">
-                  <PhoneIcon />
-                  <div className="ml-3">Phone</div>
                 </div>
                 <ArrowIcon />
               </a>
