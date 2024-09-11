@@ -20,6 +20,7 @@ const projects = [
     imageUrl: "/freecell.png",
     githubLink: "https://github.com/AntonioKaram/Freecell-AI-Solver",
     websiteLink: "https://drive.google.com/file/d/1IDUjCIZfACdZfAUUqpGrJCJtGphgBFVK/view?usp=sharing",
+    scroll: false,
   },
   {
     id: 1,
@@ -29,6 +30,7 @@ const projects = [
     imageUrl: "/dunne.jpg",
     githubLink: "https://github.com/AntonioKaram/DunneHall-Website",
     websiteLink: "https://dunnehall.com",
+    scroll: true,
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const projects = [
     imageUrl: "/music.jpg",
     githubLink: "https://github.com/AntonioKaram/MusicData ",
     websiteLink: "https://music-and-happiness.vercel.app/",
+    scroll: true,
   },
   {
     id: 3,
@@ -47,6 +50,7 @@ const projects = [
     imageUrl: "/storagefinder.jpg",
     githubLink: "https://github.com/AntonioKaram/storage-finder.git",
     websiteLink: "http://storagefinder.s3-website.us-east-2.amazonaws.com/",
+    scroll: true,
   },
   {
     id: 4,
@@ -56,6 +60,7 @@ const projects = [
     imageUrl: "/lfsr.png",
     githubLink: "https://github.com/AntonioKaram/Final-Project-LFSR",
     websiteLink: "https://platform.efabless.com/shuttles/GFMPW-1",
+    scroll: false,
   },
   {
     id: 5,
@@ -65,6 +70,7 @@ const projects = [
     imageUrl: "/cliserv.png",
     githubLink: "",
     websiteLink: "",
+    scroll: false,
   },
   {
     id: 6,
@@ -74,6 +80,7 @@ const projects = [
     imageUrl: "/fs.gif",
     githubLink: "",
     websiteLink: "",
+    scroll: false,
   },
 
 ];
@@ -564,7 +571,7 @@ export default function Home() {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className={(project.id < 4 && project.id != 0) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "h-72 rounded-lg" }
+                        className={project.scroll ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "h-72 rounded-lg" }
                       />
                     </div>
                   </div>
@@ -638,7 +645,7 @@ export default function Home() {
                       <img
                         src={project.imageUrl}
                         alt={project.title}
-                        className={(project.id < 4) ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "object-none h-72 rounded-lg" }
+                        className={project.scroll ? "w-full h-full ease-in-out duration-[6s] hover:-translate-y-3/4" : "object-none h-72 rounded-lg" }
                       />
                     </div>
                   </div>
