@@ -16,7 +16,7 @@ const projects = [
     id: 0,
     title: "Freecell AI Solver",
     description:
-      "Reversed engineered Windows XP Freecell using static and dynamic analysis and implemented AI search algorithms to find an optimal win strategy for the current game.",
+      "Reverse engineered Windows XP Freecell using static and dynamic analysis and implemented AI search algorithms to find an optimal win strategy for the current game.",
     imageUrl: "/freecell.png",
     githubLink: "https://github.com/AntonioKaram/Freecell-AI-Solver",
     websiteLink: "https://drive.google.com/file/d/1IDUjCIZfACdZfAUUqpGrJCJtGphgBFVK/view?usp=sharing",
