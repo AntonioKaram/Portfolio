@@ -369,16 +369,17 @@ export default function Home() {
               rel="noreferrer"
             >
               <img
-                src="https://svgshare.com/i/uRr.svg"
+                src="/assembly.svg"
                 width="36"
                 height="36"
                 alt="Assembly"
               />
             </a>
+            
 
             <a href="https://www.verilog.com/" target="_blank" rel="noreferrer">
               <img
-                src="https://svgshare.com/i/uU1.svg"
+                src="/chip.svg"
                 width="36"
                 height="36"
                 alt="Verilog"
@@ -404,7 +405,7 @@ export default function Home() {
 
             <a href="https://tableau.com/" target="_blank" rel="noreferrer">
               <img
-                src="https://svgshare.com/i/uRK.svg"
+                src="/tableau.svg"
                 width="36"
                 height="36"
                 alt="Tableau"
